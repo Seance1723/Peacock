@@ -20,6 +20,7 @@ class PEACOCK_THEME {
          * Class.
          */
         Assets::get_instance();
+		Menus::get_instance();
 
         $this->setup_hooks();
     }
@@ -57,6 +58,17 @@ class PEACOCK_THEME {
 		add_theme_support( 'title-tag' );
 
 		/**
+		 * 
+		 * Supports Custom Background
+		 * 
+		 */
+		add_theme_support( 'custom-background', [
+			'default-color' => '#fff',
+			'default-image' => '',
+		]);
+
+
+		/**
 		 * Add post-formats support.
 		 */
 		add_theme_support(
@@ -81,18 +93,6 @@ class PEACOCK_THEME {
 		*/
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 1568, 9999 );
-
-		/*
-		*Enable support for Nav menu for website
-		*
-		*/
-		register_nav_menus(
-			array(
-				'primary' => esc_html__( 'Primary menu', 'peacock' ),
-				'secondary' => esc_html__( 'Top Header menu', 'peacock' ),
-				'footer'  => esc_html__( 'Footer menu', 'peacock' ),
-			)
-		);
 
 		/*
 		* Switch default core markup for search form, comment form, and comments

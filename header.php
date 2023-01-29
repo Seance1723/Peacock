@@ -21,14 +21,16 @@
     <?php wp_title(''); ?>
   </head>
   <body <?php body_class(); ?>>
-  <?php
-    if (function_exists('wp_body_open')) {
-      wp_body_open();
-    } 
-  ?>
-<!-- header -->
-<header id="site-header" class="page-header static">
-    <?php get_template_part('template-parts/header/header', 'static'); ?>
-</header>
-<!-- ./header -->
-<h1>Header</h1>
+    <?php
+      if (function_exists('wp_body_open')) {
+        wp_body_open();
+      } 
+    ?>
+    <div id="main-wrapper" class="site">
+      <!-- header -->
+      <header id="site-header" class="page-header static">
+          <?php get_template_part('template-parts/header/header', 'static'); ?>
+      </header>
+      <!-- ./header -->
+      <div id="main-content" class="site-content">
+        <main id="main" class="site-main">

@@ -10946,4 +10946,11 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+:root {
+  --theme-font: "Poppins", sans-serif !important;
+}
+
+body {
+  font-family: var(--theme-font);
 }/*# sourceMappingURL=style.css.map */
