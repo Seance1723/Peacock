@@ -11,24 +11,40 @@
 
 get_header();
 
-/* Start the Loop */
-while ( have_posts() ) :
-	the_post();
+echo 'single.php page';
 
-	get_template_part( 'template-parts/content/content', 'single' );
+if ( have_posts() ) { ?>
 
-	if ( is_attachment() ) {
-		// Parent post navigation.
-		the_post_navigation(
-			array(
-				/* translators: %s: Parent post link. */
-				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'peacock' ), '%title' ),
-			)
-		);
-	}
+    <section id="posts-page" class="default-posts">
+        <div class="container">
+            <div class="row">
+                <div class="content-side col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                    <?php
+                        /* Start the Loop */
+                        while ( have_posts() ) {
 
-endwhile; // End of the loop.
+                            the_post();
+                            
+                            // Include the single post content template.
+                            get_template_part( 'template-parts/content/content', 'single' );
 
-
+                            // If comments are open or we have at least one comment, load up the comment template.
+                            if ( comments_open() || get_comments_number() ) {
+                                comments_template();
+                            }
+                        }
+                    ?>
+                </div>
+                <div class="sidebar-side col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <h3>Sidebar</h3>
+                </div>
+            </div>
+        </div>
+    </section><!-- .posts-page -->
+<?php
+} else {
+    // If no content, include the "No posts found" template.
+	get_template_part( 'template-parts/content/content', 'none' );
+}
 
 get_footer();
