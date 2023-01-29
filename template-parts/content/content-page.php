@@ -12,7 +12,7 @@ echo '--container--';
  ?>
 
 <section id="home-slider">
-    <div id="peacockCarousel" class="carousel slide" data-bs-ride="false">
+    <div id="peacockCarousel" class="carousel slide carousel-fade" data-bs-ride="false">
         <div class="carousel-indicators">
             <?php
                 $i = 0;
@@ -42,7 +42,7 @@ echo '--container--';
                 $peacock_slider_image = get_post_meta( get_the_ID(), 'peacock-slider-image', true );
                 $peacock_slider_header = get_post_meta( get_the_ID(), 'peacock-slider-header', true );
             ?>
-            <div class="carousel-item <?php if ( $i == 0 ) { echo 'active'; } ?>">
+            <div class="carousel-item <?php if ( $i == 0 ) { echo 'active'; } ?>" data-bs-interval="2000">
                 <img src="<?php echo esc_url( $peacock_slider_image ); ?>" class="d-block w-100" alt="<?php the_title(); ?>">
                 <div class="carousel-caption d-none d-md-block">
                     <h5><?php echo esc_html( $peacock_slider_header ); ?></h5>
