@@ -1,0 +1,72 @@
+/*
+*
+* Contains all map & variables for the scss
+*
+*
+*/
+
+@import './mixins/mixins';
+
+$default-font-family: poppins, sans-serif;
+
+
+
+//Colors
+$colors: (
+  primary: #007bff,
+  secondary: #6c757d,
+  success: #28a745,
+  danger: #dc3545,
+  warning: #ffc107,
+  info: #17a2b8,
+  light: #f8f9fa,
+  dark: #343a40
+);
+
+//@include define-colors($colors);
+
+//Header font size
+$header-font-sizes: (
+  h1: 88px,
+  h2: 72px,
+  h3: 50px,
+  h4: 40px,
+  h5: 28px,
+  h6: 22px
+);
+
+
+
+$font-sizes: (
+  10: 10px,
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  22: 22px,
+  24: 24px
+);
+
+
+@include root-vars;
+
+
+h1 {
+  @include header-style(h1);
+}
+h2 {
+  @include header-style(h2);
+}
+h3 {
+  @include header-style(h3);
+}
+h4 {
+  @include header-style(h4);
+}
+h5 {
+  @include header-style(h5);
+}
+h6 {
+  @include header-style(h6);
+}

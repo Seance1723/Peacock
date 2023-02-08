@@ -6,7 +6,7 @@
  *
  * @package Peacock
  */
-echo 'content.php page';
+
 ?>
 
 
@@ -31,7 +31,7 @@ echo 'content.php page';
     <!-- Post Content -->
     <?php if ( is_home() || is_page() ) : ?>
         <div class="entry-content">
-            <?php the_content(); ?>
+            <?php echo wp_trim_words( get_the_content(), 50 ); ?>
         </div>
     <?php elseif( is_single() ) : ?>
         <div class="entry-content">

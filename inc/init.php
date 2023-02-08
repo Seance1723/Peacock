@@ -22,3 +22,10 @@ function peacock_get_theme_instance() {
 	\PEACOCK_THEME\Inc\PEACOCK_THEME::get_instance();
 }
 peacock_get_theme_instance();
+
+function add_svg_to_upload_mimes( $upload_mimes ) {
+	$upload_mimes['svg'] = 'image/svg+xml';
+	$upload_mimes['svgz'] = 'image/svg+xml';
+	return $upload_mimes;
+}
+add_filter( 'upload_mimes', 'add_svg_to_upload_mimes', 10, 1 );

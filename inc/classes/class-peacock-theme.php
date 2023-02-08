@@ -161,6 +161,6 @@ class PEACOCK_THEME {
 		// Add Support for Breadcrumbs in theme.
 		//require get_template_directory() . '/inc/breadcrumbs-functions.php';
 
-	}
+	}	  
 
 }

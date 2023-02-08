@@ -11,7 +11,6 @@
 
 get_header();
 
-echo 'single.php page';
 
 if ( have_posts() ) { ?>
 

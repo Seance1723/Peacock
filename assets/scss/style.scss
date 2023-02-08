@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import "inc/header";
 
-@import "../vendor/bootstrap/scss/bootstrap";
-
 //Theme File
 @import "core/codetrait";
+
+//Bootstrap v5.2
+@import "../vendor/bootstrap/scss/bootstrap";
+

@@ -1,0 +1,73 @@
+/*
+*
+* Contains all mixins for the scss
+*
+*
+*/
+
+
+@mixin root-vars {
+    :root {
+      @include default-font;
+      @each $name, $hex in $colors {
+        // Call the mixin with the hexadecimal value of each color
+        --#{$name}-color: #{$hex};
+      }
+      @each $color, $hex in $colors {
+        --#{$color}: #{red($hex)}, #{green($hex)}, #{blue($hex)};
+      }
+      @each $header, $font-size in $header-font-sizes {
+        --#{$header}-font-size: #{$font-size};
+      }
+      @each $size, $value in $font-sizes {
+        --text-#{$size}: #{$value};
+      }
+    }
+
+    $start: 10;
+    $end: 120;
+    $step: 2;
+
+    @for $i from $start through $end {
+      .w-#{$i} {
+        @include size(width, $i + px);
+      }
+      .h-#{$i} {
+        @include size(height, $i + px);
+      }
+      $start: $start * $step;
+    }
+
+}
+
+@mixin size($dimension, $size) {
+  #{$dimension}: $size;
+}
+
+@mixin header-style($size) {
+  font-size: map-get($header-font-sizes, $size) !important;
+  font-weight: 600 !important;
+}
+
+@mixin default-font {
+  --default-font-family: poppins, sans-serif !important;
+}
+
+@mixin hex-to-rgb($hex) {
+  $red: 0;
+  $green: 0;
+  $blue: 0;
+  
+  @if (length($hex) == 6) {
+    $red:   red($hex);
+    $green: green($hex);
+    $blue:  blue($hex);
+  }
+  
+  cl-red: $red;
+  cl-green: $green;
+  cl-blue: $blue;
+}
+
+// Loop through the map of colors
+

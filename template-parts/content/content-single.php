@@ -6,7 +6,7 @@
  *
  * @package Peacock
  */
-echo 'content-single.php Page';
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

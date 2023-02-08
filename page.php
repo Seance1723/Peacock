@@ -6,7 +6,7 @@
  *
  * @package Peacock
  */
-echo 'page.php page';
+
 
 get_header();
 

@@ -1,7 +1,16 @@
-:root{
-    --theme-font: 'Poppins', sans-serif !important;
-}
+/*
+* Includes all Styles for the Theme
+*
+*
+*
+*/
 
-body{
-    font-family: var(--theme-font);
-}
+@import './components/variables';
+
+@import './components/typography';
+
+@import './components/header';
+
+@import './components/cards'
+
+
