@@ -1,0 +1,46 @@
+//link
+.cta-link{
+    a{
+        text-decoration: none;
+        color: rgb(var(--dark));
+        position: relative;
+        font-size: 18px;
+        font-weight: 600;
+        &:hover{
+            color: rgb(var(--dark));
+            &::after{
+                background: rgb(var(--primary));
+            }
+        }
+        &:after{
+            content: "";
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            background: rgb(var(--dark));
+            bottom: -12px;
+            left: 0;
+        }
+    }
+}
+
+.cta-primary {
+    @include cta-style(rgb(var(--primary)), rgb(var(--light)));
+}
+  
+.cta-secondary {
+    @include cta-style(rgb(var(--dark)), rgb(var(--light)));
+}
+  
+.cta-light {
+    @include cta-style(rgb(var(--light)), rgb(var(--primary)));
+}
+  
+.cta-dark {
+    @include cta-style(rgb(var(--dark)), rgb(var(--light)));
+}
+  
+.cta-text {
+    @include cta-style(transparent, rgb(var(--dark)));
+}
+  

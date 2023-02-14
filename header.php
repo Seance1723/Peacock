@@ -28,6 +28,8 @@
         do_action( 'wp_body_open' );
       } 
     ?>
+    <div id="cursor"></div>
+    <div id="circle"></div>
     <div id="main-wrapper" class="site">
       <!-- header -->
       <header id="site-header" class="page-header static">

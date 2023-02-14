@@ -1,0 +1,34 @@
+*{
+    cursor: none;
+}
+#cursor {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    background: rgb(var(--light));
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 2147483648;
+    transition: transform .5s;
+    &.hovered{
+        background: rgb(var(--light));
+        transform: scale(6.2);
+    }
+}
+#circle {
+    position: absolute;
+    pointer-events: none;
+    width: 48px;
+    height: 48px;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    border-radius: 50%;
+    background: rgba(var(--light), .05);
+    border: 2px solid rgb(var(--light));
+    transition: all .2s cubic-bezier(0, 0.5, 1, 1);
+    mix-blend-mode: difference;
+    z-index: 2147483647;
+}

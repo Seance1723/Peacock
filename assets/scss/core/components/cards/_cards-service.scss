@@ -1,0 +1,25 @@
+.service-card{
+    &-s, &-e{
+        .vc_column-inner{
+            background: rgb(var(--dark));
+        }
+    }
+    &-c{
+        .vc_column-inner{
+            background: rgb(var(--primary));
+        }
+    }
+    &-s, &-c, &-e{
+        .sub-heading{
+            p{
+                color: rgb(var(--light));
+            }
+        }
+        .heading{
+            p{
+                color: rgb(var(--light));
+                font-weight: 600;
+            }
+        }
+    }
+}

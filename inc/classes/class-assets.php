@@ -50,8 +50,12 @@ class Assets
 
     public function register_scripts(){
         wp_register_script('bootstrap-js', PEACOCK_DIR_URI . '/assets/vendor/bootstrap/js/bootstrap.bundle.js', ['jquery'], false, true);
+        wp_register_script('pointer-js', PEACOCK_DIR_URI . '/assets/vendor/pointer/pointer.js', ['jquery'], false, true);
+        wp_register_script('theme-js', PEACOCK_DIR_URI . '/assets/js/theme.js', ['jquery'], false, true);
 
         wp_enqueue_script('bootstrap-js');
+        wp_enqueue_script('pointer-js');
+        wp_enqueue_script('theme-js');
     }
 
 

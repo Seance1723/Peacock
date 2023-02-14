@@ -1,0 +1,37 @@
+//posts
+#posts-as-list{
+    li{
+        list-style-type: none;
+        border-top: 1px solid rgb(var(--dark), 0.2);
+        padding: 40px 0;
+        &:last-child{
+            border-bottom: 1px solid rgb(var(--dark), 0.2);
+        }
+        &>.post-categories{
+            &>.cat-links{
+                text-decoration: none;
+                padding: 0 30px;
+                font-size: 18px;
+                color: rgb(var(--dark));
+                text-transform: uppercase;
+                &:hover{
+                    color: rgb(var(--dark));
+                }
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+        }
+        a{
+            text-decoration: none;
+            margin-top: 16px;
+            color: rgb(var(--dark));
+            &:hover{
+                color: rgb(var(--primary));
+            }
+        }
+    }
+}

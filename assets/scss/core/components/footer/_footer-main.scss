@@ -1,0 +1,127 @@
+#page-footer{
+    &.footer-main{
+        .footer-bottom{
+            background: rgb(var(--dark));
+            background: -moz-linear-gradient(90deg, rgba(var(--dark),1) 0%, rgba(var(--dark),1) 50%, rgba(255,255,255,1) 50%);
+            background: -webkit-linear-gradient(90deg, rgba(var(--dark),1) 0%, rgba(var(--dark),1) 50%, rgba(255,255,255,1) 50%);
+            background: linear-gradient(90deg, rgba(var(--dark),1) 0%, rgba(var(--dark),1) 50%, rgba(255,255,255,1) 50%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5956e9",endColorstr="#ffffff",GradientType=1);
+            .footer-bottom-content{
+                background: rgb(var(--dark));
+                .footer-left-container{
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+                    padding-right: 10%;
+                }
+                .footer-right-container{
+                    background: rgb(var(--primary-dark));
+                    position: relative;
+                    position: relative;
+                    padding: 60px 80px 40px 80px;
+                    &::before{
+                        content: "CODET";
+                        color: rgb(var(--primary), 0.08);
+                        font-weight: 900;
+                        font-size: 80px;
+                        position: absolute;
+                        left: 0;
+                    }
+                    .widget{
+                        &:nth-child(1){
+                            padding-top: 30px;
+                        }
+                        &:nth-child(2){
+                            padding: 30% 0;
+                        }
+                        &:nth-child(3){
+                            p{
+                                &:first-child{
+                                    font-size: 18px;
+                                    color: rgb(var(--light));
+                                }
+                                &:last-child{
+                                    font-size: 14px;
+                                    color: rgb(var(--dark-mid));
+                                }
+                            }
+                        }
+                    }
+                }
+                .widget{
+                    .widget-title{
+                        color: rgb(var(--light));
+                        margin: 30px 0 20px 0;
+                    }
+                    ul{
+                        padding: 0;
+                        margin: 0;
+                        li{
+                            list-style-type: none;
+                            display: inline-block;
+                            position: relative;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            color: rgb(var(--light));
+                            a{
+                                text-decoration: none;
+                                color: rgb(var(--light));
+                                &:before{
+                                    content: "/";
+                                    position: absolute;
+                                    right: 100%;
+                                    margin-right: -2px;
+                                }
+                                &:hover{
+                                    color: rgb(var(--primary));
+                                    &:before{
+                                        color: rgb(var(--light));
+                                    }
+                                }
+                            }
+                            &:first-child{
+                                padding-left: 0;
+                                a{
+                                    &::before{
+                                        content: '';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(1){ //logo section
+                        img{
+                            width: 120px;
+                        }
+                    }
+                    &:nth-child(2){ //About text
+                        .textwidget{
+                            p{
+                                margin-top: 20px;
+                                margin-bottom: 30px;
+                                color: rgb(var(--light));
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        margin-bottom: 30px;
+                    }
+                    &:nth-child(5){ //Copyright
+                        padding-top: 40px;
+                        border-top: 1px solid rgba(var(--light), 0.2);
+                        p{
+                            margin-bottom: 0;
+                            color: rgb(var(--light));
+                            a{
+                                text-decoration: none;
+                                color: inherit;
+                                &:hover{
+                                    color: rgb(var(--primary));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

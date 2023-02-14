@@ -7,10 +7,29 @@
 
 @import './components/variables';
 
+@import './components/colors';
+
+@import './components/global';
+
+@import './components/pointer';
+
 @import './components/typography';
+
+@import './components/buttons';
+
+@import './components/lists';
+
+@import './components/img';
 
 @import './components/header';
 
-@import './components/cards'
+@import './components/cards';
+
+@import './components/accordion';
+
+//Plugin
+@import './components/carousel';
+
+@import './components/footer';
 
 

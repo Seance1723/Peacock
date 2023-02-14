@@ -11,17 +11,17 @@ $header_menus   = wp_get_nav_menu_items( $header_menu_id );
 ?>
 
 <?php if ( has_nav_menu( 'peacock-header-menu' ) ) : ?>
-  <nav class="navbar navbar-expand-lg bg-light" aria-label="<?php esc_attr_e( 'Header Menu', 'peacock' ); ?>">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg" aria-label="<?php esc_attr_e( 'Header Menu', 'peacock' ); ?>">
+    <div class="container">
       <?php if ( has_custom_logo() ) : ?>
-          <a class="navbar-brand"><?php the_custom_logo(); ?></a>
+        <?php the_custom_logo(); ?>
       <?php endif; ?>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php if ( ! empty( $header_menus ) && is_array( $header_menus ) ) { ?>
-				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <?php
               foreach ( $header_menus as $menu_item ) {
                 if ( ! $menu_item->menu_item_parent ) {

@@ -1,0 +1,23 @@
+#who-we-are{
+    .uc_accordion{
+        .uc_accordion_inner{
+            border-radius: 0 !important;
+            margin: 0;
+            .uc_acc_trigger{
+                padding: 40px;
+                font-size: 24px;
+                font-weight: 600;
+                color: rgb(var(--light));
+                &.active{
+                    color: rgb(var(--dark));
+                    background-color: rgb(var(--light));
+                }
+            }
+            .uc_acc_container{
+                border-top: none !important;
+                padding: 0 40px 40px 40px;
+                background: rgb(var(--light));
+            }
+        }
+    }
+}

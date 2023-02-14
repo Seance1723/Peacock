@@ -7,37 +7,48 @@
 
 
 @mixin root-vars {
-    :root {
-      @include default-font;
-      @each $name, $hex in $colors {
-        // Call the mixin with the hexadecimal value of each color
-        --#{$name}-color: #{$hex};
-      }
-      @each $color, $hex in $colors {
-        --#{$color}: #{red($hex)}, #{green($hex)}, #{blue($hex)};
-      }
-      @each $header, $font-size in $header-font-sizes {
-        --#{$header}-font-size: #{$font-size};
-      }
-      @each $size, $value in $font-sizes {
-        --text-#{$size}: #{$value};
-      }
+  :root {
+    @include default-font;
+    @each $name, $hex in $colors {
+      // Call the mixin with the hexadecimal value of each color
+      --#{$name}-color: #{$hex};
     }
-
-    $start: 10;
-    $end: 120;
-    $step: 2;
-
-    @for $i from $start through $end {
-      .w-#{$i} {
-        @include size(width, $i + px);
-      }
-      .h-#{$i} {
-        @include size(height, $i + px);
-      }
-      $start: $start * $step;
+    @each $color, $hex in $colors {
+      --#{$color}: #{red($hex)}, #{green($hex)}, #{blue($hex)};
     }
+    @each $header, $font-size in $header-font-sizes {
+      --#{$header}-font-size: #{$font-size};
+    }
+    @each $size, $value in $font-sizes {
+      --text-#{$size}: #{$value};
+    }
+  }
 
+  @each $color, $hex in $colors {
+    .#{$color}-color {
+      color: rgb(var(--#{$color}));
+    }
+  }
+
+  @each $color, $hex in $colors {
+    .#{$color}-bg {
+      background-color: rgb(var(--#{$color}));
+    }
+  }
+
+  $start: 10;
+  $end: 200;
+  $step: 2;
+
+  @for $i from $start through $end {
+    .w-#{$i} {
+      @include size(width, $i + px);
+    }
+    .h-#{$i} {
+      @include size(height, $i + px);
+    }
+    $start: $start * $step;
+  }
 }
 
 @mixin size($dimension, $size) {
@@ -71,3 +82,26 @@
 
 // Loop through the map of colors
 
+@mixin img-widths($start, $increment: 2) {
+  $i: $start;
+  @while $i <= 200 {
+    .img-#{$i} {
+      img{
+        width: #{$i}px !important;
+        height: #{$i}px !important;
+      }
+    }
+    $i: $i + $increment;
+  }
+}
+
+@mixin cta-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+}

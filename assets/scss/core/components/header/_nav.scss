@@ -1,0 +1,33 @@
+#site-header{
+    nav{
+        &.navbar{
+            .custom-logo-link{
+                img{
+                    &.custom-logo{
+                        width: 146px;
+                        height: auto;
+                    }
+                }
+            }
+            .navbar-collapse{
+                .navbar-nav{
+                    .nav-item{
+                        margin-right: 60px;
+                        &:last-child{
+                            margin: 0;
+                        }
+                        .nav-link{
+                            font-size: 18px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            color: rgb(var(--dark));
+                            &:hover{
+                                color: rgb(var(--primary));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
