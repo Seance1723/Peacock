@@ -9,7 +9,6 @@
 
 ?>
 
-
 <div class="option-inner">
     <div class="inner-header d-flex justify-content-between">
         <h4 class="header">
@@ -25,7 +24,18 @@
         <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
         <form method="post" enctype="multipart/form-data">
             <p>Current favicon:</p>
-            
+            <?php
+                $site_url = get_site_icon_url();
+                echo $site_url;
+                if ($site_url) {
+                    ?>
+                    <img src="<?php echo $site_url ?>" alt="Current favicon">
+                    <?php
+                } else {
+                    echo '<p>No favicon uploaded yet.</p>';
+                }
+            ?>
+
             <p><label for="favicon_url">Upload new favicon:</label></p>
             <p>
                 <input type="hidden" name="my_upload_form_nonce" value="<?php echo wp_create_nonce('my_upload_form_nonce'); ?>">
@@ -38,6 +48,7 @@
 </div>
 
 <?php
+
 
 if (isset($_POST['my_upload_form_nonce']) && wp_verify_nonce($_POST['my_upload_form_nonce'], 'my_upload_form_nonce')) {
     my_upload_form();
@@ -82,6 +93,9 @@ function my_upload_form() {
         $image_16 = imagescale($image, 16, 16);
         $image_32 = imagescale($image, 32, 32);
         $image_180 = imagescale($image, 180, 180);
+        imagesavealpha($image_16, true);
+        imagesavealpha($image_32, true);
+        imagesavealpha($image_180, true);
         imagedestroy($image);
         
         // Save resized images as favicon-32x32.png and favicon-64x64.png

@@ -53,7 +53,7 @@
                     <?php //include_once( get_template_directory() . '/inc/admin/logo/theme-logo.php' ); ?>
                 </div>
                 <div class="tab-pane fade" id="v-pills-footer" role="tabpanel" aria-labelledby="v-pills-footer-tab" tabindex="0">
-                    <?php include_once( get_template_directory() . '/inc/admin/themeOpt-logo.php' ); ?>
+                    <?php include_once( get_template_directory() . '/inc/admin/footer/theme-footer.php' ); ?>
                 </div>
             </div><!-- ./admin-body -->
         </div>
