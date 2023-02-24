@@ -22,6 +22,8 @@ class PEACOCK_THEME {
         Assets::get_instance();
 		Menus::get_instance();
 		Widgets::get_instance();
+		Svg::get_instance();
+		Admin::get_instance();
 
         $this->setup_hooks();
     }

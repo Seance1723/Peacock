@@ -1,0 +1,84 @@
+@import './varaibles';
+
+.wrap{
+    &.peacock-theme-option{
+        margin-top: 40px;
+        .theme-header{
+            background: rgb(var(--dark));
+            padding: 15px 40px;
+            .branding{
+                img{
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+        .theme-option-body{
+            background: rgb(var(--dark));
+            .admin-nav{
+                margin: 0 !important;
+                width: 24%;
+                .nav-link{
+                    padding: 24px 5px 24px 30px;
+                    border-radius: 0;
+                    color: rgb(var(--light));
+                    font-size: 16px;
+                    position: relative;
+                    &:first-child{
+                        margin-top: 24px;
+                    }
+                    &.active{
+                        background-color: rgb(var(--secondary));
+                        //border-left: 8px solid rgb(var(--primary));
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 8px;
+                            height: 100%;
+                            background: rgb(var(--primary));
+                        }
+
+                    }
+                    ul{
+                        li{
+                            list-style-type: none;
+                            text-align: left;
+                            img{
+                                width: 32px;
+                                height: auto;
+                                margin-right: 24px;
+                            }
+                            .nav-header{
+                                text-transform: uppercase;
+                            }
+                            .sub-text{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .admin-body{
+                background: rgb(var(--bg-light));
+                border: 1px solid rgb(var(--border-light));
+                padding: 40px;
+                .tab-pane{
+                    border: 1px solid rgb(var(--border-light));
+                    background: rgb(var(--light));
+                    .option-inner{
+                        .inner-header{
+                            padding: 15px 20px;
+                            background: rgb(var(--dark-l));
+                            border-bottom: 1px solid rgb(var(--bg-light));
+                        }
+                        .inner-content{
+                            padding: 15px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

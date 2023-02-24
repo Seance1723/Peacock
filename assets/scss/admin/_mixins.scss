@@ -1,0 +1,7 @@
+@mixin root-vars {
+    :root {
+        @each $color, $hex in $colors {
+            --#{$color}: #{red($hex)}, #{green($hex)}, #{blue($hex)};
+        }
+    }
+}

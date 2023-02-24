@@ -1,0 +1,22 @@
+@import './mixins';
+
+//Colors
+$colors: (
+  primary: #6458EE,
+  primary-dark: #001733,
+  secondary: #6c757d,
+  success: #28a745,
+  danger: #dc3545,
+  warning: #ffc107,
+  info: #17a2b8,
+  light: #f8f9fa,
+  dark: #000D1D,
+  dark-m: #888888,
+  dark-l: #f1f2f5,
+  bg-light: #e9ecef,
+  border-light: #d6dbe2
+);
+
+
+
+@include root-vars;

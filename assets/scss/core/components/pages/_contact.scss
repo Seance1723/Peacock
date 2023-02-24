@@ -1,0 +1,24 @@
+.contact-us{
+    &.contact-form{
+        .contact{
+            &-left{
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        list-style-type: none;
+                        margin-bottom: 15px;
+                        a{
+                            text-decoration: none;
+                            color: rgb(var(--dark));
+                            &:hover{
+                                text-decoration: none;
+                                color: rgb(var(--dark));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
