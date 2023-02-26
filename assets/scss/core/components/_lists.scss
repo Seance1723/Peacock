@@ -34,4 +34,67 @@
             }
         }
     }
+    &.about-us-page{
+        .post-content{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .post-title{
+                z-index: 2;
+                .serial{
+                    font-size: 144px;
+                    line-height: 1;
+                    font-weight: bold;
+                    font-family: inherit;
+                    color: transparent;
+                    margin-right: 80px;
+                    position: relative;
+                    top: -2px;
+                    transition: all .45s;
+                    -webkit-text-stroke: 1px rgb(var(--light));
+                }
+                .title-inner{
+                    display: inline-block;
+                    .post-categories{
+                        margin-bottom: 24px;
+                    }
+                    h5{
+                        transition: all .45s;
+                        padding-top: 5px;
+                    }
+                }
+            }
+            .post-image{
+                position: absolute;
+                top: -28%;
+                height: auto;
+                left: 56%;
+                width: 41%;
+                z-index: 1;
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(40px) rotate(0deg) skewY(-10deg);
+                transform-origin: top center;
+                transition: all .45s;
+                img{
+                    width: 440px;
+                    height: 280px;
+                }
+            }
+            &:hover{
+                .post-title{
+                    .serial{
+                        color: rgb(var(--primary));
+                        -webkit-text-stroke: 1px rgb(var(--primary));
+                    }
+                }
+                .post-image{
+                    opacity: 0.5;
+                    transform: translateY(0) skewY(0) scaleZ(1) rotate(-15deg);
+                    visibility: visible;
+                }
+            }
+        }
+    }
 }
