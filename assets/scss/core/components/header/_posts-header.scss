@@ -1,0 +1,26 @@
+//Single posts
+#post-header{
+    position: relative;
+    .header-conainer{
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &> .container{
+            position: inherit;
+            z-index: 1;
+        }
+        .entry-title{
+            padding: 120px 0;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(var(--dark), 0.5);
+            z-index: 0;
+        }
+    }
+}

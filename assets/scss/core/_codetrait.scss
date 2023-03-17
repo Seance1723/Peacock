@@ -27,6 +27,8 @@
 
 @import './components/accordion';
 
+@import './components/widget';
+
 //Forms
 @import './components/forms';
 
@@ -36,6 +38,9 @@
 
 //Pages
 @import './components/pages';
+
+//Posts
+@import './components/posts/posts';
 
 @import './components/footer';
 

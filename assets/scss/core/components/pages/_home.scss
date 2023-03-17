@@ -1,0 +1,26 @@
+#hero-animation{
+    .wpb_wrapper{
+        position: relative;
+        .wpb_single_image{
+            &:first-child{
+                position: absolute;
+                top: 31%;
+                left: 43%;
+                z-index: 1;
+                // Apply the animation to the image
+                animation: rotate-clockwise 60s linear infinite;
+                animation-timing-function: steps(60);
+            }
+        }
+    }
+}
+
+// Define the keyframes for the animation
+@keyframes rotate-clockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

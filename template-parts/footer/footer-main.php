@@ -1,5 +1,5 @@
 <div class="footer-top">
-
+    <canvas id="stars" width="300" height="300"></canvas>
 </div>
 <div class="footer-bottom">
     <div class="footer-bottom-content container">
