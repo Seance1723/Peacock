@@ -29,5 +29,22 @@
                 }
             }
         }
+        .tagcloud{
+            a{
+                text-decoration: none;
+                color: rgb(var(--light));
+                background: rgba(var(--dark), 0.8);
+                margin-right: 8px;
+                padding: 6px 20px;
+                border-radius: 4px;
+                line-height: 52px;
+                &:last-child{
+                    margin: 0;
+                }
+                &:hover{
+                    background: rgb(var(--primary));
+                }
+            }
+        }
     }
 }

@@ -1,150 +1,89 @@
 #page-footer{
     &.footer-main{
         position: relative;
-        padding-top: 300px;
-        .footer-top{
-            position: absolute;
-            right: 0;
-            bottom: 20%;
-            z-index: 0;
-            width: 64%;
-            height: 100vh;
-            max-height: 640px;
-            background: rgb(28,16,162);
-            background: -moz-radial-gradient(circle, rgba(28,16,162,1) 0%, rgba(20,11,116,1) 40%, rgba(12,7,70,1) 70%);
-            background: -webkit-radial-gradient(circle, rgba(28,16,162,1) 0%, rgba(20,11,116,1) 40%, rgba(12,7,70,1) 70%);
-            background: radial-gradient(circle, rgba(28,16,162,1) 0%, rgba(20,11,116,1) 40%, rgba(12,7,70,1) 70%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c10a2",endColorstr="#0c0746",GradientType=1);
-            #stars {
-                display: block;
-                position: relative;
-                width: 100%;
-                height: 16rem;
-                height: 100vh;
-                max-height: 640px !important;
-                z-index: 1;
+        background: rgb(var(--dark));
+        color: rgb(var(--light));
+        .inner-content{
+            display: flex !important;
+            justify-content: space-between !important;
+        }
+        .footer-section{
+            padding-top: 100px;
+            padding-bottom: 60px;
+            .footer-inner{
+                max-width: 33.33333333%;
+                section{
+                    padding: 30px 0 30px;
+                    &:first-child{
+                        padding-top: 0;
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                    input{
+                        &[type=email], &[type=text]{
+                            background: transparent !important;
+                            border-top: none !important;
+                            border-left: none !important;
+                            border-right: none !important;
+                            border-color: rgb(var(--light));
+                            color: rgb(var(--light));
+                            &:focus-visible, &:focus{
+                                border-top: none !important;
+                                border-left: none !important;
+                                border-right: none !important;
+                                border-color: rgb(var(--light));
+                                outline: none !important;
+                            }
+                        }
+                        &[type=checkbox]{
+                            width: 20px !important;
+                            height: 20px !important;
+                            display: inline-block !important;
+                            padding: 0;
+                            background: rgb(var(--light));
+                            border: 1px solid rgb(var(--light));
+                            appearance: auto;
+                        }
+                        &[type=submit]{
+                            width: auto;
+                            padding: 10px 30px;
+                        }
+                    }
+                }
             }
         }
         .footer-bottom{
-            position: relative;
-            background: rgb(var(--dark));
-            background: -moz-linear-gradient(90deg, rgba(var(--dark),1) 0%, rgba(var(--dark),1) 50%, rgba(255,255,255,0) 50%);
-            background: -webkit-linear-gradient(90deg, rgba(var(--dark),1) 0%, rgba(var(--dark),1) 50%, rgba(255,255,255,0) 50%);
-            background: linear-gradient(90deg, rgba(var(--dark),1) 0%, rgba(var(--dark),1) 50%, rgba(255,255,255,0) 50%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5956e9",endColorstr="#ffffff",GradientType=1);
-            .footer-bottom-content{
-                background: rgb(var(--dark));
-                .footer-left-container{
-                    padding-top: 60px;
-                    padding-bottom: 40px;
-                    padding-right: 10%;
-                }
-                .footer-right-container{
-                    background: rgb(var(--primary-dark));
-                    position: relative;
-                    position: relative;
-                    padding: 60px 80px 40px 80px;
-                    &::before{
-                        content: "CODET";
-                        color: rgb(var(--primary), 0.08);
-                        font-weight: 900;
-                        font-size: 80px;
-                        position: absolute;
-                        left: 0;
-                    }
-                    .widget{
-                        &:nth-child(1){
-                            padding-top: 30px;
-                        }
-                        &:nth-child(2){
-                            padding: 30% 0;
-                        }
-                        &:nth-child(3){
-                            p{
-                                &:first-child{
-                                    font-size: 18px;
-                                    color: rgb(var(--light));
-                                }
-                                &:last-child{
-                                    font-size: 14px;
-                                    color: rgb(var(--dark-mid));
-                                }
-                            }
-                        }
+            padding: 40px 0;
+            p{
+                margin: 0 !important;
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    list-style-type: none;
+                    display: inline-block;
+                    a{
+                        text-decoration: none;
+                        color: inherit;
                     }
                 }
-                .widget{
-                    .widget-title{
-                        color: rgb(var(--light));
-                        margin: 30px 0 20px 0;
-                    }
+            }
+            svg{
+                width: 28px;
+                height: 28px;
+                fill: rgb(var(--light));
+                &:hover{
+                    fill: rgb(var(--primary));
+                }
+            }
+            section{
+                font-size: 14px;
+                nav{
                     ul{
-                        padding: 0;
-                        margin: 0;
-                        li{
-                            list-style-type: none;
-                            display: inline-block;
-                            position: relative;
-                            padding-left: 20px;
-                            padding-right: 20px;
-                            color: rgb(var(--light));
-                            a{
-                                text-decoration: none;
-                                color: rgb(var(--light));
-                                &:before{
-                                    content: "/";
-                                    position: absolute;
-                                    right: 100%;
-                                    margin-right: -2px;
-                                }
-                                &:hover{
-                                    color: rgb(var(--primary));
-                                    &:before{
-                                        color: rgb(var(--light));
-                                    }
-                                }
-                            }
-                            &:first-child{
-                                padding-left: 0;
-                                a{
-                                    &::before{
-                                        content: '';
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    &:nth-child(1){ //logo section
-                        img{
-                            width: 120px;
-                        }
-                    }
-                    &:nth-child(2){ //About text
-                        .textwidget{
-                            p{
-                                margin-top: 20px;
-                                margin-bottom: 30px;
-                                color: rgb(var(--light));
-                            }
-                        }
-                    }
-                    &:nth-child(4){
-                        margin-bottom: 30px;
-                    }
-                    &:nth-child(5){ //Copyright
-                        padding-top: 40px;
-                        border-top: 1px solid rgba(var(--light), 0.2);
-                        p{
-                            margin-bottom: 0;
-                            color: rgb(var(--light));
-                            a{
-                                text-decoration: none;
-                                color: inherit;
-                                &:hover{
-                                    color: rgb(var(--primary));
-                                }
-                            }
-                        }
+                        display: flex !important;
+                        justify-content: space-between !important;
                     }
                 }
             }

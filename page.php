@@ -10,6 +10,8 @@
 
 get_header();
 
+//echo ('PAGE');
+
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();

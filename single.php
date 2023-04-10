@@ -11,7 +11,7 @@
 
 get_header();
 
-
+//echo ('SINGLE');
 if ( have_posts() ) { ?>
 
     <?php get_template_part( 'template-parts/header/header', 'posts' ); ?>

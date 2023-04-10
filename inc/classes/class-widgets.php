@@ -94,9 +94,33 @@ class Widgets
 
         register_sidebar(
             array(
-                'name'          => esc_html__( 'Footer Contact', 'peacock' ),
-                'id'            => 'footer-contact',
-                'description'   => esc_html__( 'Add widgets here to appear in your footer contact section.', 'peacock' ),
+                'name'          => esc_html__( 'Footer 5', 'peacock' ),
+                'id'            => 'footer-5',
+                'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'peacock' ),
+                'before_widget' => '<section id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</section>',
+                'before_title'  => '<h5 class="widget-title">',
+                'after_title'   => '</h5>',
+            )
+        );
+
+        register_sidebar(
+            array(
+                'name'          => esc_html__( 'Footer 6', 'peacock' ),
+                'id'            => 'footer-6',
+                'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'peacock' ),
+                'before_widget' => '<section id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</section>',
+                'before_title'  => '<h5 class="widget-title">',
+                'after_title'   => '</h5>',
+            )
+        );
+
+        register_sidebar(
+            array(
+                'name'          => esc_html__( 'Footer 7', 'peacock' ),
+                'id'            => 'footer-7',
+                'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'peacock' ),
                 'before_widget' => '<section id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</section>',
                 'before_title'  => '<h5 class="widget-title">',

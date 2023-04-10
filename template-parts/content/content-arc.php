@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying arc posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -22,9 +22,9 @@
     <header class="entry-header">
 		<?php
             if ( is_singular() ) :
-                the_title( '<h3 class="entry-title">', '</h3>' );
+                the_title( '<h5 class="entry-title">', '</h5>' );
             else :
-                the_title( '<h3 class="entry-title"><a class="entry-link" href="'.esc_url( get_permalink() ).'">', '</a></h3>' );
+                the_title( '<h5 class="entry-title"><a class="entry-link" href="'.esc_url( get_permalink() ).'">', '</a></h5>' );
             endif;
         ?>
 	</header><!-- .entry-header -->
